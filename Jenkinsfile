@@ -16,7 +16,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'hubor-cre', url: 'https://github.com/1056661516/hellowworld.git'
+                checkout scmGit(branches: [[name: "*/${branch}"]], extensions: [], userRemoteConfigs: [[credentialsId: 'hubor-cre', url: 'https://github.com/1056661516/hellowworld.git']])
+                //git credentialsId: 'hubor-cre', url: 'https://github.com/1056661516/hellowworld.git'
             }
         }
         stage('Build JAR') {
