@@ -6,7 +6,7 @@ pipeline {
 
     environment {
         // 设置环境变量，如Maven和Docker相关配置
-        //MAVEN_OPTS = "-Dmaven.repo.local=/wj/jenkins/maven/apache-maven-3.8.8/repo"
+        MAVEN_OPTS = "-Dmaven.repo.local=/wj/jenkins/maven/apache-maven-3.8.8/repo"
         IMAGE_NAME = 'chinapopin.com:18443/k8s/hellowworld'
         TAG = 'latest'
         REGISTRY_URL = 'https://chinapopin.com:18443/'
